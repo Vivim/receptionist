@@ -30,7 +30,25 @@ gem 'spring',        group: :development
 group :test, :development do
 	gem 'rspec-rails'
 	gem 'factory_girl_rails'
+	gem 'faker'
+	gem 'json_spec'
+	gem 'database_cleaner'
+	# gem 'capybara-webkit'
+	gem 'selenium-webdriver'
+	gem 'better_errors'
+	gem 'binding_of_caller'
 end
+
+group	:test do
+	gem 'capybara'
+	gem 'launchy'
+	gem 'shoulda-matchers'
+end
+
+gem 'devise'
+gem 'cancan'
+gem 'slim'
+gem 'twitter-bootstrap-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
