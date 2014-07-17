@@ -7,8 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <p class="notice"><%= notice %></p> 
+  <p class="alert"><%= alert %></p>
+  <ul>
+    <% if user_signed_in? %>
+      <%= link_to 'Your profile', cabinet_details_path %>
+      <%= link_to 'Edit your details', edit_user_registration_path %>
+      <%= link_to 'Sign out', destroy_user_session_path, data: {confirm: 'Are you sure?'}, method: :delete %>
+    <% else %>
+      <%= link_to 'Log up', new_user_registration_path %>
+      <%= link_to 'Log in', new_user_session_path %>
+    <% end %>
+  </ul>
+  <%= yield %>
 </body>
 </html>
