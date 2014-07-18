@@ -3,7 +3,7 @@ ul
 	li Name: #{@user.first_name}
 	li Baranov: #{@user.last_name}
 	li Name: #{@user.telephone}
-	li Role: #{@user.role.split('_').join(' ').capitalize}
+	li Role: #{@user.role_to_str}
 
 - if @user.role == 'building_owner'
 	.building-list
